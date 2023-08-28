@@ -25,4 +25,26 @@ public:
 
         return xorr;
     }
+
+// most optimal solution:
+
+#include<vector>
+
+int getSingleElement(vector<int> &arr){
+	int ans = 0;
+
+    for(int i=1;i<arr.size();i = i+2){
+
+        if(arr[i-1]!= arr[i]){
+
+            ans = arr[i-1];
+
+            return ans;
+
+        }
+
+    }
+
+    return arr[arr.size()-1];	
+}
 };
