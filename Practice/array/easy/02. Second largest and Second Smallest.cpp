@@ -50,20 +50,43 @@ std::vector<int> getSecondOrderElements(int n, std::vector<int> a) {
 }
 
 //Leetcode (Check if array is sorted and rotated):
+//Brute Force -> Rotate and Check:  Time comp=O[nlogn]  space comp=O[n]
 
 class Solution {
 public:
+    void rotate(vector<int> &nums,int k){
+        reverse(nums.begin(),nums.begin()+k);
+        reverse(nums.begin()+k,nums.end());
+        reverse(nums.begin(),nums.end());
+    }
     bool check(vector<int>& nums) {
-        int n=nums.size();
-        int cnt=0;
+        vector<int> temp=nums;
+        sort(temp.begin(),temp.end());
+        for(int i=0;i<nums.size();i++){
+           vector<int> temp_nums=nums;
+            rotate(temp_nums,i);
+            if(temp_nums==temp){
+               return true;
+            }
+        }
+        return false;
+    }
+};
+
+//Optimal Code: Time comp=O[n]  space comp=O[1]
+
+class Solution {
+public:
+    bool check(vector<int> &nums){
+        int count=0,n=nums.size();
         for(int i=1;i<n;i++){
             if(nums[i-1]>nums[i]){
-                cnt++;
+                count++;
             }
         }
         if(nums[n-1]>nums[0]){
-            cnt++;
+            count++;
         }
-        return cnt<=1;
+        return count<=1;
     }
 };
