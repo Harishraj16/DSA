@@ -1,4 +1,4 @@
-//Usual_solution:
+//Usual_Solution:
 
 void bubbleSort(int arr[], int n)
     {
