@@ -32,7 +32,7 @@ int main()
     return 0;
 }
 
-//Optimizing the Naive Approach (Using two loops): Time:  ~O(n^3)    Space: O(1)
+//Optimizing the Naive Approach (Using two loops): Time:  ~O(n^2)    Space: O(1)
 
 
 #include <bits/stdc++.h>
