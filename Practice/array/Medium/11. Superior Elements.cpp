@@ -1,4 +1,4 @@
-
+//Brute force Approach:  Time:O(N^2)         Space:O(N) 
 
 #include<bits/stdc++.h>
 using namespace std;
