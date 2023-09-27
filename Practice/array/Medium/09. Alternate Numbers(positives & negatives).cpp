@@ -15,3 +15,24 @@ vector<int> alternateNumbers(vector<int>&a) {
     }
     return a;
 }
+
+
+// Optimal Approach: Time:O(N)              Space: O(N)
+
+vector<int> alternateNumbers(vector<int>&a) {
+    int  n=a.size();
+    vector<int> ans(n,0);
+    int pos_index=0,neg_index=1;
+    
+    for(int i=0;i<n;i++){
+        if(a[i]<0){
+            ans[neg_index]=a[i];
+            neg_index += 2;
+        }
+        else{
+            ans[pos_index]=a[i];
+            pos_index += 2;
+        }
+    }
+    return ans;
+}
