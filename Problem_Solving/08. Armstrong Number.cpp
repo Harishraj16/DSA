@@ -1,3 +1,5 @@
+//Checking Amstrong number:
+
 #include<bits/stdc++.h>
 bool checkArmstrong(int n){
 	int N=n; //n will be modified so N is created for comparison ant the end
