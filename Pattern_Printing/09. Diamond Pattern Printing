@@ -42,7 +42,7 @@ int main()
 using namespace std;
 int main(){
     int n;
-    cout<<"Enter thread_local value of n:"
+    cout<<"Enter the value of n:"
     cin>>n;
     for(int i=1;i<=2*n;i++){
         if(i<=2*n/2){
