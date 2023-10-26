@@ -30,3 +30,40 @@ int main() {
     }
     return 0;
 }
+
+
+
+//Optimal code:
+
+#include <iostream>
+using namespace std;
+int main() {
+    int n,a,b;
+    cout<<"Enter n: ";
+    cin>>n;
+    for(int i=1;i<=2*n;i++){
+        a=n-(i-1);
+        b=2*n-(2*n-(2*(i-1)));
+        if(i>2*n/2){
+            a=i-n;
+            b=2*n-2*(i-n);
+        }
+        //Star
+        for(int j=1;j<=a;j++){
+            cout<<"*";
+        }
+        
+        //Space
+        for(int j=1;j<=b;j++){
+            cout<<" ";
+        }
+        
+        //Star
+        for(int j=1;j<=a;j++){
+            cout<<"*";
+        }
+        
+        cout<<endl;
+    }
+    return 0;
+}
