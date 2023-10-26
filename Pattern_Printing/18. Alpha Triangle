@@ -5,11 +5,13 @@ int main() {
     cout<<"Enter n: ";
     cin>>n;
     for(int i=1;i<=n;i++){
-        int c=(n-1)+'A';
+        int c=(n-i)+'A';
+        char t=c;
         for(int j=1;j<=i;j++){
-            cout<<static_cast<char>(c)<<" ";
-            c--;
+            cout<<t<<" ";
+            t++;
         }
+        c--;
         cout<<endl;
     }
     return 0;
