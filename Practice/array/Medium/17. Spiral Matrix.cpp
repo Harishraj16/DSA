@@ -1,4 +1,4 @@
-//this problem has only one solution:   Time:O(m*n)     Space:O(N)
+//this Spiral Matrix problem has only one solution:   Time:O(m*n)     Space:O(N)
 
 vector<int> spiralMatrix(vector<vector<int>>&MATRIX) {
    int n=MATRIX.size();
