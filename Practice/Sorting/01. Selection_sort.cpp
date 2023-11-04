@@ -34,5 +34,5 @@ int select(int arr[], int i)
         }
         swap(arr[i],arr[mini]);
         
-        select(arr,i++);
+        select(arr,i+1);
     }
