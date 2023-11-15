@@ -113,7 +113,7 @@ int main()
 }
 
 
-//Optimal Solution (for +ve & zero): Time:  ~O(2n)    Space: O(1)
+//Optimal Solution (for +ve): Time:  ~O(2n)    Space: O(1)
 
 #include <bits/stdc++.h>
 using namespace std;
