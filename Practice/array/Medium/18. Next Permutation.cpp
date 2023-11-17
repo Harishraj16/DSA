@@ -1,4 +1,4 @@
-
+//Only for C++ using STL:
 #include<iostream>
 #include<vector>
 #include<algorithm>
@@ -16,7 +16,7 @@ int main() {
 }
 
 
-
+//Optimal Solution For all the languages:
 #include <bits/stdc++.h>
 using namespace std;
 
