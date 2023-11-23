@@ -86,7 +86,7 @@ vector<int> majorityElement(vector<int> v) {
 
     // Uncomment the following line
     // if it is told to sort the answer array:
-    // sort(ls.begin(), ls.end()); //TC --> O(2*log2) ~ O(1);
+    sort(ls.begin(), ls.end()); //TC --> O(2*log2) ~ O(1);
 
     return ls;
 }
