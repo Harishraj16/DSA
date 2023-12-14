@@ -20,7 +20,7 @@ int main()
     /*iterate in the map
     for(auto it:mpp){
         cout<<it.first<<"->"<<it.second<<endl;
-    }*/
+     }*/
     
     int q;
     cin>>q;
