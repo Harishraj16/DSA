@@ -4,7 +4,7 @@ bool palindrome(int n)
     int rev=0;
     int N=n;
     while(n){
-    rev=rev*10+n%10;
+    rev=rev*10+n%10 ;
     n/=10;
     }
     if(N==rev)
