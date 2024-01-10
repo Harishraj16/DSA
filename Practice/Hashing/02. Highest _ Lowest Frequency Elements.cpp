@@ -37,5 +37,5 @@ vector<int> getFrequencies(vector<int>& v) {
 
     }
 
-    return freq ;
+    return freq;
 }
