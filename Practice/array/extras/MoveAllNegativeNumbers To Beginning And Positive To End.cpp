@@ -1,3 +1,11 @@
+//time comp: O(NlogN) because of sorting.
+#include <bits/stdc++.h> 
+vector<int> separateNegativeAndPositive(vector<int> &nums){
+    sort(nums.begin(),nums.end());
+    return nums;
+}
+
+//Optimal: O(N)
 #include <bits/stdc++.h> 
 vector<int> separateNegativeAndPositive(vector<int> &nums){
     int left = 0, right = nums.size()-1;
