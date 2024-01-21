@@ -1,3 +1,24 @@
+//Optimal: time: O(N+M)  space:O(N)
+#include <bits/stdc++.h> 
+pair < int , int > findSimilarity(vector < int > arr1, vector < int > arr2, int n, int m) 
+{
+	int inter=0,u=0;
+	unordered_map<int,int> mp;
+	for(int i=0;i<n;i++){
+		mp[arr1[i]]++;
+	}   
+	for(int i=0;i<m;i++){
+		if(mp.find(arr2[i])!=mp.end()){
+			inter++;
+		}
+		else{
+			u++;
+		}
+	}
+	return {inter,mp.size()+u};
+}
+
+//Optimal: time: O(N+M)  space:O(N)
 #include <bits/stdc++.h> 
 pair < int , int > findSimilarity(vector < int > arr1, vector < int > arr2, int n, int m) 
 {
