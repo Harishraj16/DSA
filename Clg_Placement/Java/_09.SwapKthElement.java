@@ -5,9 +5,4 @@ class Solution {
         arr[i] = arr[j];
         arr[j] = temp;
     }
-
-    // Example usage to swap elements in an integer array
-    void swapKth(int[] arr, int n, int k) {
-        swap(arr, k-1, n-k);
-    }
 }
