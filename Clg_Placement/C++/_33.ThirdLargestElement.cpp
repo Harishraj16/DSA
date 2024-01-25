@@ -11,7 +11,7 @@ class Solution{
                 SecondMaxi = Maxi;
                 Maxi = a[i];
             }
-            else if(a[i]>SecondMaxi && a[i]!=Maxi){
+            else if(a[i]>SecondMaxi && a[i]<Maxi){
                 ThirdMaxi = SecondMaxi;
                 SecondMaxi = a[i];
             }
