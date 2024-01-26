@@ -28,3 +28,19 @@ class Solution
         }
     }
 };
+
+
+
+class Solution
+{
+  public:
+    void sortIt(long long arr[], long long n)
+    {
+      sort(arr, arr+n, [](int a, int b)->int{   //using lambda function
+        if(a%2==0 && b%2==0) return a < b;
+        if(a%2!=0 && b%2!=0) return a > b;
+        if(a%2!=0 && b%2==0) return 1;
+        else return 0;
+      });
+    }
+};
