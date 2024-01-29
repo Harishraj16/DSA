@@ -1,3 +1,24 @@
+//Brute way!!
+class Compute {
+    
+    public void reverse(int arr[],int start,int end){
+        while(start<end){
+            int temp = arr[end];
+            arr[end]=arr[start];
+            arr[start]=temp;
+            start++;
+            end--;
+        }
+    }
+    
+    public void rotate(int arr[], int n)
+    {
+        reverse(arr,0,n-2);
+        reverse(arr,0,n-1);
+    }
+}
+
+//optimal way!!
 class Compute {
     
     public void rotate(int arr[], int n)
