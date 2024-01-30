@@ -1,3 +1,4 @@
+//prentend to use Dutch National Flag Algorithm:
 class Solution
 {
     //Function to sort the binary array.
@@ -13,6 +14,25 @@ class Solution
                 arr[low]=arr[low]^arr[high];
                 high--;
             }
+        }
+    }
+}
+
+//simple intution:
+class Solution
+{
+    //Function to sort the binary array.
+    static void binSort(int a[], int n)
+    {
+        int zero = 0;
+        int one = 0;
+        for(int i=0;i<n;i++){
+            if(a[i]==0) zero++;
+            else one++;
+        }
+        for(int i=0;i<n;i++){
+            if(i<zero) a[i]=0;
+            else a[i]=1;
         }
     }
 }
