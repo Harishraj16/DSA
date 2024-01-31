@@ -2,7 +2,7 @@
 class Compute 
 {
     public long[] minAnd2ndMin(long arr[], long n)  
-    {
+    { 
         long small = Long.MAX_VALUE;
         long secondsmall = Long.MAX_VALUE;
         for(int i=0;i<n;i++){
