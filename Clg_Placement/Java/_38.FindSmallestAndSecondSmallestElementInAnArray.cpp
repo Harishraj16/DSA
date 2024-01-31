@@ -1,13 +1,24 @@
-vector<int> minAnd2ndMin(int a[], int n) {
-    int small = INT_MAX;
-    int secondsmall = INT_MAX;
-    for(int i=0;i<n;i++){
-        if(a[i]<small){
-            secondsmall = small;
-            small = a[i];
+
+class Compute 
+{
+    public long[] minAnd2ndMin(long arr[], long n)  
+    {
+        long small = Long.MAX_VALUE;
+        long secondsmall = Long.MAX_VALUE;
+        for(int i=0;i<n;i++){
+            if(arr[i]<small){
+                secondsmall = small;
+                small = arr[i];
+            }
+            else if(arr[i]<secondsmall && arr[i]!=small){
+                secondsmall = arr[i];
+            }
         }
-        else if(a[i]<secondsmall && a[i]>small) secondsmall =a[i];
+        if(small == Long.MAX_VALUE || secondsmall == Long.MAX_VALUE)
+        return new long[]{-1};
+        long[] res = new long[2];
+        res[0] = small;
+        res[1] = secondsmall;
+        return res;
     }
-    if(small==INT_MAX || secondsmall==INT_MAX) return {-1};
-    return {small,secondsmall};
 }
