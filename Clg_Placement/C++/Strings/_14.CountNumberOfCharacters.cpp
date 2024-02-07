@@ -13,3 +13,18 @@ class Solution
             return res;
         }
 };
+
+//Another Way:
+class Solution {
+public:
+    vector<int> count(string s) {
+        vector<int> res(4, 0);
+        for (char c : s) {
+            if (isupper(c)) res[0]++;
+            else if (islower(c)) res[1]++;
+            else if (isdigit(c)) res[2]++;
+            else res[3]++;
+        }
+        return res;
+    }
+};
