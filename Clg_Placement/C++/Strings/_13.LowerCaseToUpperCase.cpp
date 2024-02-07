@@ -5,3 +5,14 @@ string to_upper(string str){
     }
     return str;
 }
+
+//Another way:
+string to_upper(string str){
+    int n = str.length();
+    for(char& c: str){
+        if('a'<=c && c<='z'){
+            c -= 32;
+        }
+    }
+    return str;
+}
