@@ -31,3 +31,18 @@ class Solution {
         return res;
     }
 };
+
+
+//Optimal way: time:O(n*m) m-size of smaller (s2) string;
+class Solution {
+  public:
+    string removeChars(string s1, string s2) {
+        string res="";
+        for(int i=0;i<s1.length();i++){
+            if(s2.find(s1[i])!=string::npos) continue;  
+            //string::npos is like mpp.end() || if condition is true present if false not present.
+            res+=s1[i];
+        }
+        return res;
+    }
+};
