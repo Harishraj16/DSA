@@ -1,10 +1,9 @@
-class Solution{   
-public:
-    int maxDays(int arr[],int n){
-        int maxi = INT_MIN;
+class Solution{
+    long maxDays(long arr[], int n){
+        long maxi = 0;
         for(int i=0;i<n;i++){
-            maxi = max(maxi,arr[i]);
+            if(arr[i]>maxi) maxi = arr[i];
         }
         return maxi;
     }
-};
+}
