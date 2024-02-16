@@ -15,3 +15,31 @@ class Solution
             return res;
         }
 };
+
+
+//Optimal Way:
+class Solution
+{
+    public:
+        string UncommonChars(string A, string B)
+        {
+           vector<int> freqA(26,0),freqB(26,0);
+           
+           for(char c: A){
+               freqA[c-'a']++;
+           }
+           for(char c: B){
+               freqB[c-'a']++;
+           }
+           string res="";
+           for(int i=0;i<26;i++){
+               if((freqA[i]>0 && freqB[i]==0)){
+                   res+=(char)(i+'a');
+               }
+               else if (freqA[i]==0 && freqB[i]>0){
+                   res+=(char)(i+'a');
+               }
+           }
+           return res.size()==0?"-1":res;
+        }
+};
