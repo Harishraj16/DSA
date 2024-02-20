@@ -13,3 +13,15 @@ string printNumber(string s, int n)
     }
     return res;
 }
+
+
+string printNumber(string s, int n) 
+{
+    int str[26] = {2,2,2,3,3,3,4,4,4,5,5,5,6,6,6,7,7,7,7,8,8,8,9,9,9,9};
+    string res = "";
+    for(int i=0;i<n;i++){
+        int ascii = s[i]-97;
+        res += char(str[ascii]+'0');
+    }
+    return res;
+}
