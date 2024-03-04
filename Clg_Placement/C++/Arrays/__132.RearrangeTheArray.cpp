@@ -1,3 +1,4 @@
+//Optimal: time:O(n*logn) space:O(n)
 class Solution{
   public:
     void rearrangeArray(int arr[], int n) {
@@ -13,6 +14,18 @@ class Solution{
         int ind=0;
         for(int it:temp){
             arr[ind++]=it;
+        }
+    }
+};
+
+
+//Brute way: time:O(N*N) Space:O(1)
+class Solution{
+  public:
+    void rearrangeArray(int arr[], int n) {
+        sort(arr,arr+n);
+        for(int i=1;i<n-1;i++){
+            reverse(arr+i,arr+n);
         }
     }
 };
