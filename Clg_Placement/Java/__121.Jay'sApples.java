@@ -1,3 +1,20 @@
+class Complete{   
+    // Function for finding maximum and value pair
+    public static int minimum_apple (int arr[], int n) {
+        //Complete the function
+        Arrays.sort(arr);
+        int count=1;
+        
+        for(int i=0;i<n-1;i++){
+            if(arr[i]!=arr[i+1]){
+                count++;
+            }
+        }
+        return count;
+    }
+}
+
+
 class Complete{
     // Function for finding maximum and value pair
     public static int minimum_apple (int arr[], int n) {
