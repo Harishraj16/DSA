@@ -9,3 +9,21 @@ class Complete{
         return count;
     }
 }
+
+
+
+class Complete{
+    
+   
+    // Function for finding maximum and value pair
+    public static int minimum_apple (int arr[], int n) {
+        //Complete the function\
+        HashSet<Integer> set  = new HashSet<>();
+        for(int i = 0; i<n; i++){
+            set.add(arr[i]);
+        }
+        int x  = set.size();
+        return x;
+    }
+    
+    
