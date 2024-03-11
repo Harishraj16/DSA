@@ -11,7 +11,7 @@ vector<string> result;
             result.push_back(sub);
         }
 
-        sort(result.begin(), result.end()); // Sort the result vector
+        sort(result.begin(), result.end()); // Sort the final result vector
 
         return result;
     }
