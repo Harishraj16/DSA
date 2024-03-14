@@ -13,7 +13,7 @@ class Solution {
     }
 }
 
-//Optimal way: 
+//Optimal way: O(log(m*n))
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
         int n = matrix.length;
