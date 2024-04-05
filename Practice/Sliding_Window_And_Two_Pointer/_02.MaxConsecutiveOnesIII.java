@@ -1,4 +1,6 @@
 //1004. Max Consecutive Ones III
+
+//Time:  not n^2 but near to that O(n*n)  Space:O(1)
 class Solution {
     public int longestOnes(int[] nums, int k) {
         int n = nums.length;
