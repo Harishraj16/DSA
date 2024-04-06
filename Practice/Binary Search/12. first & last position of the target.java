@@ -7,7 +7,7 @@ class Solution {
         }
         else{
             return new int[]{-1,-1};
-        }
+        } 
     }
     public int binarysearch(int[] nums,int target,boolean findleft){
         int start=0,end=nums.length-1,ans=-1;
