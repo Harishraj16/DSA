@@ -4,5 +4,5 @@ bool isBinary(string str)
        if(str[i]=='0' || str[i]=='1')   continue;
        else return 0; 
    }
-   return 1;
+   return 1; 
 }
