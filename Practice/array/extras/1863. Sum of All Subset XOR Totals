@@ -1,0 +1,16 @@
+class Solution {
+    private int sum;
+    public int subsetXORSum(int[] nums) {
+        sum = 0;
+        subset(0,nums,0);
+        return sum;
+    }
+    public void subset(int i,int[] nums,int xor){
+        if(i==nums.length){
+            sum += xor;
+            return;
+        }
+        subset(i+1,nums,xor^nums[i]);
+        subset(i+1,nums,xor);
+    }
+}
