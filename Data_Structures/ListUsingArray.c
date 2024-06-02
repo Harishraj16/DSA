@@ -73,7 +73,7 @@ int main() {
                     printf("Enter the position(position initially 0):");
                     scanf("%d",&pos);
                     if(pos<0 || pos>=size){
-                        printf("Ivalid position!");
+                        printf("Invalid position!");
                         break;
                     }
                     deleteFromPos(pos);
