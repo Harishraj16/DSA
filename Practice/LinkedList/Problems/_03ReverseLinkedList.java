@@ -1,3 +1,5 @@
+//Brute force Approach:
+
 class Solution {
     public ListNode reverseList(ListNode head) {
         if(head==null || head.next == null) return head;
@@ -18,6 +20,8 @@ class Solution {
 }
 
 
+//Better Approach:
+
 
 class Solution {
     public ListNode reverseList(ListNode head) {
@@ -36,6 +40,10 @@ class Solution {
 }
 
 
+
+
+
+//Optimal Approach:
 
 class Solution {
     public ListNode reverseList(ListNode head) {
