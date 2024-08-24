@@ -11,6 +11,8 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
+
+/*
 class Solution {
 public:
     ListNode* helper(ListNode* temp,int count,int k,stack<int>& st){
@@ -44,5 +46,30 @@ public:
             temp = helper(temp,0,k,st);
         }
         return head;
+    }
+};
+*/
+
+
+class Solution {
+public:
+    ListNode* reverseKGroup(ListNode* head, int k) {
+        int cnt = 0;
+        ListNode* curr = head;
+        while(curr!=NULL){
+            cnt++;
+            curr = curr->next;
+        }
+        if(cnt<k) return head;
+        curr = head;
+        ListNode* prev = NULL;
+        for(int i=0;i<k;i++){
+            ListNode* temp = curr->next;
+            curr->next = prev;
+            prev = curr;
+            curr = temp;
+        }
+        head->next = reverseKGroup(curr,k);
+        return prev;
     }
 };
